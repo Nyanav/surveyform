@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Math&display=swap');
+
+#title{
+    display:flex;
+    justify-content: center;
+    color: rgb(39, 137, 202);
+    margin-top: 20px;
+    font-family: Stix Two Math;
+    border-radius: 50px;
+}
+#description{
+    display:flex;
+    justify-content: center;
+    color: rgb(39, 137, 202);
+    font-size: larger;
+    font-family: Stix Two Math;
+    font-weight:bolder;
+    margin-top: 0px;
+}
+html{
+    background-image: url("https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80");
+    z-index: -1;
+    background-size: cover;
+    background-repeat: none;
+}
+.container{
+    background-color: rgb(243, 243, 243);
+    min-width: 1100px;
+    max-width: 100%;
+    border-radius: 20px;
+    display: inline-block;
+    margin-left: 150px;
+    opacity: 0.9;
+    padding-bottom: 30px;
+}
+#logo{
+    width: 350px;
+    margin-top: 50px;
+    margin-left: 530px;
+}
+.group{
+    color: black;
+    font-family: Stix Two Math;
+    font-size: large;
+    min-width: 80%;
+    margin-top: 20px;
+}
+input[type="text"], input[type="email"], input[type="number"], select{
+    display: block;
+    width: 90%;
+    min-height: 30px;
+    margin-left: 40px;
+}
+textarea{
+    display: block;
+    width: 90%;
+    min-height: 100px;
+    margin-left: 40px;
+}
+.texlign{
+    margin-left: 40px;
+}
+#name-label{
+    margin-top: 20px;
+}
+.radio{
+    display: block;
+    font-family: Stix Two Math;
+    margin-left: 40px;
+}
+#submit{
+    margin-top: 20px;
+    margin-left: 400px;
+    width: 400px;
+    height: 40px;
+    background-color: rgb(39, 137, 202);
+    color: white;
+    font-family: Stix Two Math; 
+    font-size: large;
+    
+}
+
+</style>
+<div class="bckimg">
+<header>
+    <img id="logo" src="https://cdn.freelogovectors.net/wp-content/uploads/2021/02/coursera-logo.png" alt="Coursera Logo">
+    <h1 id="title">User Survey Form</h1>
+    <p id="description">Thank you for your time to help us improve our user experience</p>
+</header>
+<body>
+    <form id="survey-form" class="container">
+        <div class="group">
+            <label id="name-label" for="name" class="texlign">Name</label>
+            <input type="text" id="name" name="name" placeholder="Please Enter Your Name" style="font-family: Stix Two Math" required>
+        </div>
+        <div class="group">
+            <label id="email-label" for="email" class="texlign">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Please Enter Your Email Address" style="font-family: Stix Two Math" required>
+        </div>
+        <div class="group">
+            <label id="number-label" for="number" class="texlign">Age</label>
+            <input type="number" id="number" name="number" min="0" max="99" placeholder="Please Enter Your Age" style="font-family: Stix Two Math" required>
+        </div>
+        <div class="group">
+            <label id="job-label" for="dropdown" class="texlign">Which Option Best Describes Your Current Occupation?</label>
+            <select id="dropdown" name="job" style="font-family: Stix Two Math" required>
+                <option disabled selected value>Select Current Occupation</option>
+                <option value="student">Student</option>
+                <option value="job">Full Time Job</option>
+                <option value="learner">Full Time Learner</option>
+                <option value="preferNo">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="group">
+            <p class="texlign" style="margin-bottom: 0">Would You Recommend Coursera to Your Friends/Colleagues?</p>
+            <label for="definitely" class="radio" > 
+                <input id="definitely" type="radio" name="recommend" value="definitely" checked>Definitely
+            </label>
+            <label for="maybe" class="radio">  
+                <input id="maybe" type="radio" name="recommend" value="maybe">Maybe
+            </label>
+            <label for="no" class="radio"> 
+                <input id="no" type="radio" name="recommend" value="no">No
+            </label>
+        </div>
+        <div class="group">
+            <p class="texlign" style="margin-bottom: 0">Which Programs Do You Like the Most in Coursera?</p>
+            <label for="onlinedegree" class="radio" > 
+                <input id="video" type="checkbox" name="feature" value="onlinedegree">Online Degrees
+            </label>
+            <label for="guidedproject" class="radio">  
+                <input id="guidedproject" type="checkbox" name="feature" value="guidedproject">Guided Projects
+            </label>
+            <label for="specialization" class="radio"> 
+                <input id="specializtion" type="checkbox" name="feature" value="specialization">Specializations
+            </label>
+            <label for="professionalcertificate" class="radio"> 
+                <input id="professionalcertificate" type="checkbox" name="feature" value="professionalcertificate">Professional Certificates
+            </label>
+        </div>
+        <div class="group">
+            <label id="suggestions" for="comment" class="texlign">Any Comments or Suggestions?</label>
+            <textarea id="comment" placeholder="Enter Your Comment Here...." style="font-family: Stix Two Math"></textarea>
+        </div>
+        
+        <button type="submit" id="submit">Submit</button>
+
+
+        
+    
+        
+
+
+    </form>
+</body>   
+</div>
+</html>
+
